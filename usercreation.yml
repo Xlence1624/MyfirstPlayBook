@@ -6,7 +6,7 @@
   tasks:
     - name: Create user fhin
       ansible.builtin.user:
-        name: fhin
+        name: dikachi
         shell: /bin/bash
         create_home: true
         state: present
