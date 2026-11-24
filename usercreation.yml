@@ -1,5 +1,4 @@
 ---
----
 - name: Create user fhin
   hosts: all
   become: false
@@ -12,11 +11,9 @@
         create_home: true
         state: present
 
-- name: Verify user fhin
-  hosts: all
-  become: false
-
-  tasks:
+  
+  
+ 
     - name: Check user
       ansible.builtin.command: id fhin
       register: user_info
