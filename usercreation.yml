@@ -1,7 +1,7 @@
 ---
 - name: Verify user fhin
   hosts: all
-  become: true
+  become: false
 
   tasks:
     - name: Check user
