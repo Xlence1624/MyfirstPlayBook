@@ -1,4 +1,17 @@
 ---
+---
+- name: Create user fhin
+  hosts: all
+  become: false
+
+  tasks:
+    - name: Create user fhin
+      ansible.builtin.user:
+        name: fhin
+        shell: /bin/bash
+        create_home: true
+        state: present
+
 - name: Verify user fhin
   hosts: all
   become: false
