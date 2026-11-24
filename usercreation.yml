@@ -1,0 +1,13 @@
+---
+- name: Verify user fhin
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Check user
+      ansible.builtin.command: id fhin
+      register: user_info
+
+    - name: Display user info
+      ansible.builtin.debug:
+        var: user_info.stdout
